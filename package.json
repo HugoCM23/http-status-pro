@@ -1,8 +1,9 @@
 {
   "name": "http-status-pro",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type":"commonjs",
   "scripts": {
     "build": "tsc",
     "test": "jest"
