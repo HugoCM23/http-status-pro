@@ -1,21 +1,19 @@
 {
   "name": "http-status-pro",
-  "version": "1.0.4",
-  "description": "A package for handling HTTP status and errors",
-  "type": "module",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "keywords": [
-    "http",
-    "status"
-  ],
-  "author": "Hugo CM",
+  "keywords": ["http", "status", "error", "response"],
+  "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.7.3"
+    "typescript": "^4.0.0",
+    "jest": "^27.0.0",
+    "ts-jest": "^27.0.0",
+    "@types/jest": "^27.0.0"
   }
 }
