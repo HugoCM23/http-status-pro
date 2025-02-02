@@ -1,6 +1,6 @@
 {
   "name": "http-status-pro",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A package for handling HTTP status and errors",
   "type": "module",
   "main": "dist/index.js",

@@ -1,2 +1,3 @@
-import { ErrorServer } from './ErrorServer';
-import { StatusServer } from './StatusServer';
+// src/index.ts
+export { ErrorServer } from './ErrorServer';
+export { StatusServer } from './StatusServer';
