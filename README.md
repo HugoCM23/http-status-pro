@@ -20,7 +20,6 @@ npm install http-status-pro
 
 ## Manejo de Errores
 
-```typescript
 import { ErrorServer } from 'http-status-pro';
 
 // Crear un error personalizado
@@ -31,7 +30,6 @@ console.log(error.message); // Resource not found
 
 ## Manejo de Éxitos
 
-```typescript
 import { StatusServer } from 'http-status-pro';
 
 // Obtener un estado exitoso
