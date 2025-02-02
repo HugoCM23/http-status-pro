@@ -1,6 +1,6 @@
 {
   "name": "http-status-pro",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type":"commonjs",
@@ -16,5 +16,6 @@
     "jest": "^27.0.0",
     "ts-jest": "^27.0.0",
     "@types/jest": "^27.0.0"
-  }
+  },
+  "files": ["dist"]
 }
