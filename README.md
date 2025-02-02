@@ -1,6 +1,6 @@
 # HttpStatusPro 🚀
 
-**HttpStatusPro** es un paquete profesional para Node.js diseñado para manejar respuestas HTTP de manera eficiente y consistente. Proporciona clases para gestionar errores y estados de éxito, lo que facilita la creación de APIs robustas y bien estructuradas.
+**HttpStatusPro** es un paquete profesional para Node.js diseñado para manejar respuestas HTTP de manera eficiente y consistente. Proporciona clases para gestionar errores y estados de éxito, lo que facilita la creación de APIs robustas y bien estructuradas. Es especialmente útil en proyectos basados en **NestJS**, donde la claridad y la consistencia en las respuestas HTTP son fundamentales.
 
 ## Características ✨
 
@@ -8,6 +8,7 @@
 - **Manejo de Éxitos**: Clase `StatusServer` para gestionar respuestas exitosas con códigos y mensajes predefinidos.
 - **Extensible**: Fácil de extender y personalizar según las necesidades de tu proyecto.
 - **TypeScript**: Totalmente escrito en TypeScript con tipos fuertes para una mejor experiencia de desarrollo.
+- **Integración con NestJS**: Diseñado para integrarse fácilmente con **NestJS**, permitiendo respuestas HTTP consistentes en controladores y servicios.
 
 ## Instalación 📦
 
