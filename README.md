@@ -21,23 +21,25 @@ npm install http-status-pro
 
 ## Manejo de Errores
 ```bash
-import { ErrorServer } from 'http-status-pro';
-
-// Crear un error personalizado
-const error = new ErrorServer('NOT_FOUND', 'Resource not found');
-console.log(error.code); // 404
-console.log(error.error); // Not Found
-console.log(error.message); // Resource not found
+import { ErrorServer } from './ErrorServer';
+// Crear un error con un tipo predefinido y un mensaje personalizado
+const customError = new ErrorServer(ErrorServer.BAD_REQUEST, 'Custom bad request message');
+console.log(customError.code); // Salida: 400
+console.log(customError.message); // Salida: Custom bad request message
 ```
 ## Manejo de Éxitos
 ```bash
-import { StatusServer } from 'http-status-pro';
+import { StatusServer } from './StatusServer';
 
-// Obtener un estado exitoso
-const status = new StatusServer();
-const response = status.getStatus('CREATED', 'User created successfully');
-console.log(response.code); // 201
-console.log(response.message); // User created successfully
+// Usar un estado directamente con un mensaje personalizado
+const customCreatedStatus = StatusServer.getStatus(StatusServer.CREATED, 'Custom creation message');
+console.log(customCreatedStatus);
+// Salida: { code: 201, message: 'Custom creation message' }
+
+// Usar un estado directamente sin mensaje personalizado
+const defaultCreatedStatus = StatusServer.getStatus(StatusServer.CREATED);
+console.log(defaultCreatedStatus);
+// Salida: { code: 201, message: 'Resource Created Successfully' }
 
 ```
 ## Contribuir 🤝

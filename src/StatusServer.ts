@@ -1,6 +1,5 @@
-// src/StatusServer.ts
 export class StatusServer {
-  private readonly status: Record<string, { code: number; message: string }> = {
+  private static readonly status: Record<string, { code: number; message: string }> = {
     CREATED: { code: 201, message: 'Resource Created Successfully' },
     UPDATED: { code: 200, message: 'Resource Updated Successfully' },
     DELETED: { code: 200, message: 'Resource Deleted Successfully' },
@@ -8,14 +7,33 @@ export class StatusServer {
     INVALID: { code: 422, message: 'Invalid Data Provided' },
   };
 
-  public getStatus(type: string, message?: string) {
-    const statusType = this.status[type];
-    if (!statusType) {
-      throw new Error(`Status type "${type}" not found.`);
-    }
+  public static getStatus(
+    status: { code: number; message: string },
+    customMessage?: string
+  ) {
     return {
-      code: statusType.code,
-      message: message || statusType.message,
+      code: status.code,
+      message: customMessage || status.message,
     };
+  }
+
+  public static get CREATED() {
+    return this.status['CREATED'];
+  }
+
+  public static get UPDATED() {
+    return this.status['UPDATED'];
+  }
+
+  public static get DELETED() {
+    return this.status['DELETED'];
+  }
+
+  public static get ALREADY_EXISTS() {
+    return this.status['ALREADY_EXISTS'];
+  }
+
+  public static get INVALID() {
+    return this.status['INVALID'];
   }
 }
